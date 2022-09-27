@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/hstyle.css">
+    <script src="https://kit.fontawesome.com/5a576a1897.js" crossorigin="anonymous"></script>
+    <title>Picture IT</title>
+</head>
+<body>
+    <header>
+        <div class="hcontainer">
+            <div class="logo">
+                <a href="#"><i class="fa-solid fa-camera-retro logo-rock blnc"></i></a>
+                <h3 class="logo-titulo blnc">Picture IT</h3>
+            </div>
+            <nav class="menu">
+                <button class="hamburgesita blnc" onclick="showMenu()"><i class="fa-solid fa-bars"></i></button>
+                <ul class="menu-links">
+                    <li>
+                        <button class="hbtn blnc" onclick="scrollToAbout()">Nosotros</button>
+                    </li>
+                    <li>
+                        <button class="hbtn blnc" onclick="scrollToGalery()">Galeria</button>
+                    </li>
+                    <li>
+                        <button class="hbtn blnc" onclick="scrollToForm()">Contacto</button>
+                    </li>
+                    <li>
+                        <button id="modo-noche" onclick="changeColor()"><i class="fa-solid fa-moon icon moon blnc"></i></button>
+                        <button id="modo-dia" onclick="changeColor()"><i class="fa-solid fa-sun icon sun blnc"></i></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="presentacion">
+            <video autoplay muted loop class="cosmic-vid" id="myVideo">
+                <source src="../matifl.github.io//src/Videos/rain.mp4" type="video/mp4">
+            </video>
+            <div class="background-video">
+                <div class="presentacion-text">
+                    <h3>Hacerlo atractivo</h3>
+                    <p>De eso se trata</p>
+                    <button class="go-down" onclick="scrollToAbout()">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="about-text">
+                <h3>Acerca de nosotros</h3>
+                <p>Creemos que todo el mundo necesita entender el por detrás de lo que conlleva hacer un buen trabajo, además de esfuerzo y tiempo se requieren muchas otras características para llevar a cabo desde una página web hasta un trabajo practico o como cualquier proyecto adelante. Por eso creemos que estar preparado en toda ocasión es esencial a la hora de afrontar nuevas oportunidades y/o plantearse nuevas metas, nuestro objetivo se basa en poder mostrarles algunos tips para poder mejorar en el ámbito de la fotografía para que puedan utilizar lo aprendido en sus siguientes pasos como emprendedores. Esperamos con ansias poder ayudarlos en sus próximos pasos!</p>
+                
+            </div>
+    
+        </div>
+        <div class="product">
+            <h3>
+                Nuestra Galeria
+            </h3>
+            <div class="pcards">
+                <div class="pcard">
+                    <img src="./src/Imgs/img1.jpg" alt="">
+                </div>
+                <div class="pcard">
+                    <img src="./src/Imgs/img2.jpg" alt="">
+                </div>
+                <div class="pcard">
+                    <img src="./src/Imgs/img3.jpeg" alt="">
+                </div>
+            
+                <div class="pcard">
+                    <img src="./src/Imgs/img4.jpeg" alt="">
+                </div>
+                <div class="pcard">
+                    <img src="./src/Imgs/img7.jpeg" alt="">
+                </div>
+                <div class="pcard">
+                    <img src="./src/Imgs/img6.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="puntos-obligatorios">
+            <div class="po">
+                <h2>Por donde empezar?</h2>
+                <p>Creemos que el mejor camino por donde empezar es empezar por aprender de forma propia, los seres humanos no aprendemos solo mirando tampoco, asi que les dejamos un video para que puedar ir practicando!</p>
+            </div>
+            <div class="po-vid">
+               <iframe id="vid"
+                src="https://www.youtube.com/embed/om48KWxKurY" 
+                title="Become a Better Photographer!" 
+                frameborder="0"
+                ></iframe>
+            </div>
+        </div>
+        
+        <div class="formulario">
+            <h5>Sumate al equipo!</h5>
+            <form action>
+                <div class="form-body">
+                    <label>Nombre:</label>
+                    <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" onkeyup="verifyForm()">
+                    <label>Apellido:</label>
+                    <input type="text" name="Apellido" id="Apellido" placeholder="Apellido" onkeyup="verifyForm()">
+                    <label>Email:</label>
+                    <input type="text" name="Email" id="Email" placeholder="Email" onkeyup="verifyForm()">
+                    <span id="textError" style="display: none; color:red">El email ingresado es invalido</span>
+                    <label>Comentario (Opcional):</label>
+                    <textarea name="Comentario" name="Comentario" id="Comentario" cols="30" rows="10" maxlength="200" placeholder="Valoramos mucho tu opinion!" ></textarea>
+                    <input type="submit" id="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <div class="insta">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram ins"></i></a>
+        </div>
+        <div class="fc">
+            <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f fc"></i></a>
+        </div>
+        
+        <div class="twt">
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter tw"></i></a>
+        </div>
+    </footer>
+    <script src="./Js/script.js"></script>
+</body>
+</html>
